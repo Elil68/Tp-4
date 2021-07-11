@@ -1,10 +1,16 @@
+
+
 class Persona:
-    def  __init__(self, dni, nombreApellido, domicilio, telefono, email, act):
+    def  __init__(self, dni, nombreApellido, domicilio, telefono, email, FechaIn = None, FechaFin = None, empresa = None):
       self.__dni = dni
       self.__nombreApellido = nombreApellido
       self.__domicilio = domicilio
       self.__telefono = telefono
-      self.__act = act
+      self.__email = email
+      self.__FechaIn = FechaIn
+      self.__FechaFin = FechaFin
+      self.__empresa = empresa
+    
 
     def get_dni(self):
         return self.__dni
@@ -31,17 +37,21 @@ class Persona:
     def set_email(self, email):
         self.__email = email
 
-    def get_act(self):
-        return self.__act
-    def set_act(self, act):
-        self.__act = act
+    def get_FechaIn(self):
+        return self.__FechaIn
+    def set_FechaIn(self, FechaIn):
+        self.__FechaIn = FechaIn
 
-    def comprobarPermiso(self, actividad):
-        self.actividad = actividad
-        if self.actividad.get_estado() == 'autorizado':
-            print('Esta autorizado')
-        else:
-            print('No esta autorizado')
+    def get_FechaFin(self):
+        return self.__FechaFin
+    def set_FechaFin(self, FechaFin):
+        self.__FechaFin = FechaFin
 
+    def get_empresa(self):
+        return self.__empresa
+    def set_empresa(self, empresa):
+        self.__empresa = empresa
+        
     def __str__(self):
-        return self.__dni+ "," +self.__nombreApellido+ "," +self.__domicilio+ "," +self.__telefono+ "," +self.__email+ "," +self.__act
+        return f"{self.__dni}, {self.__nombreApellido}, {self.__domicilio}, {self.__telefono}, {self.__email}, {self.__FechaIn}, {self.__FechaFin}, {self.__empresa}"
+        
