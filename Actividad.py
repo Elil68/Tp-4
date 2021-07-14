@@ -2,7 +2,6 @@ class Actividad:
     def __init__(self, nombreActividad):
         self.__nombreActividad = str(nombreActividad)
         
-
     def get_nombreActividad(self):
         return self.__nombreActividad
     def set_nombreActividad(self, nombreActividad):

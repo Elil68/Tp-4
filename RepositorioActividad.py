@@ -1,5 +1,7 @@
 from Actividad import Actividad
+
 Actividades = []
+
 class RepositorioActividad:
     def GuardardAct(act):
         Actividades.append(act)

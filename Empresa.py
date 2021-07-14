@@ -1,5 +1,4 @@
 
-
 class Empresa:
 
     def __init__(self, razonSocial, cuit, domicilio, localidad, emailEmpresa, telefono, actividad = None):
@@ -10,12 +9,6 @@ class Empresa:
         self.__emailEmpresa = emailEmpresa
         self.__telefono = telefono
         self.__actividad = actividad
-
-    # def AsignarActividad(act):
-    #     if RepositorioActividad.ExistenciaActividad(act) == True:
-    #         Empresa.set_actividad(act)
-    #     else:
-    #         print("Actividad no autorizada")
 
 
     def get_razonSocial(self):

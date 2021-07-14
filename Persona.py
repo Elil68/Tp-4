@@ -1,5 +1,4 @@
 
-
 class Persona:
     def  __init__(self, dni, nombreApellido, domicilio, telefono, email, FechaIn = None, FechaFin = None, empresa = None):
       self.__dni = dni

@@ -5,6 +5,7 @@ from RepositorioEmpresa import RepositorioEmpresa
 FechaAhora = date.today()
 ListPersona = []
 ListPerAutorizado = []
+
 class RepositorioPersona:
     def GuardarPersona(per):
         ListPersona.append(per)

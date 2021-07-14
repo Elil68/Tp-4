@@ -1,4 +1,5 @@
 from Empresa import Empresa
+
 ListEmpresa = [] 
 ListEmpresasAutorizadas = []
 

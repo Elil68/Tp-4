@@ -46,8 +46,6 @@ def RegistrarEmpresa():
     else:
         print("Actividad no autorizada")
         
-
-
     RepositorioEmpresa.GuardarEmpresa(empresa)
     print("Empresa registrada correctamente.")
 
