@@ -14,8 +14,7 @@ class RepositorioEmpresa():
         for i in ListEmpresa:
             if Empresa.get_razonSocial(i) == empre:
                 return True
-            else:
-                return False
+            
     def ObtenerEmpresa(empre):
         for i in ListEmpresa:
             if Empresa.get_razonSocial(i) == empre:
@@ -30,7 +29,9 @@ class RepositorioEmpresa():
         for i in ListEmpresasAutorizadas:
             if Empresa.get_razonSocial(i) == empre:
                 return True
-            else:
-                return False
+    
+    def MostrarEmpresaA():
+        for i in ListEmpresasAutorizadas:
+            print (i)
                 
             

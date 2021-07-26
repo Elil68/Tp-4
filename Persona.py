@@ -1,6 +1,6 @@
 
 class Persona:
-    def  __init__(self, dni, nombreApellido, domicilio, telefono, email, FechaIn = None, FechaFin = None, empresa = None):
+    def  __init__(self, dni, nombreApellido, domicilio, telefono, email, FechaIn = None, FechaFin = None, empresa = None, codigoQr = None):
       self.__dni = dni
       self.__nombreApellido = nombreApellido
       self.__domicilio = domicilio
@@ -9,6 +9,8 @@ class Persona:
       self.__FechaIn = FechaIn
       self.__FechaFin = FechaFin
       self.__empresa = empresa
+      self.__codigoQr = codigoQr
+      
     
 
     def get_dni(self):
@@ -50,7 +52,12 @@ class Persona:
         return self.__empresa
     def set_empresa(self, empresa):
         self.__empresa = empresa
-        
+
+    def get_codigoQr(self):
+        return self.__codigoQr
+    def set_codigoQr(self, codigoQr):
+        self.__codigoQr = codigoQr
+
     def __str__(self):
-        return f"{self.__dni}, {self.__nombreApellido}, {self.__domicilio}, {self.__telefono}, {self.__email}, {self.__FechaIn}, {self.__FechaFin}, {self.__empresa}"
+        return f"{self.__dni}, {self.__nombreApellido}, {self.__domicilio}, {self.__telefono}, {self.__email}, {self.__FechaIn}, {self.__FechaFin}, {self.__empresa}, {self.__codigoQr}"
         

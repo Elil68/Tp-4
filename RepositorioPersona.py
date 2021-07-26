@@ -1,3 +1,4 @@
+from Ingreso import Ingreso
 from Persona import Persona
 from datetime import date
 from RepositorioEmpresa import RepositorioEmpresa
@@ -14,24 +15,25 @@ class RepositorioPersona:
     def MostrarPersona():
         for i in ListPersona:
             print(i)
+    def MostrarPersonaA():
+        for i in ListPerAutorizado:
+            print(i)
     
-    def AutorizarFecha():
-        for j in ListPersona:
-            if Persona.get_FechaFin(j) >= FechaAhora:
-                return True
             
-    def AutorizarPersona(per):
-        if RepositorioEmpresa.ComprobarAutorizacion(Persona.get_empresa(per)) == True:
-            if RepositorioPersona.AutorizarFecha() == True:
+    def AutorizarPersona(per, empre):
+        if RepositorioEmpresa.ComprobarAutorizacion(empre) == True:
+            if Persona.get_FechaFin(per) >= FechaAhora:
                 RepositorioPersona.AgregarPerAutorizada(per)
+            else:
+                print("Fecha de ingreso vencida.")
+        else:
+            print("Empresa no autorizada.")
+            
     
     def ComprobarAutorizados(dniPer):
         for i in ListPerAutorizado:
-            print("\n----------------------------------------------------------------------------------------\n")
-            if dniPer == Persona.get_dni(i):
-                print("La persona esta autorizada")
-            else:
-                print("La persona no esta autorizada")
+            if Persona.get_dni(i) == dniPer:
+                return True
 
     def DarBaja(dniPer):
         for j in ListPerAutorizado:
@@ -41,5 +43,18 @@ class RepositorioPersona:
                 print("Persona fue dada de baja con exito.")
             else:
                 print("Persona no existente.")
-
     
+    def ObtenerPer(dni):
+        for i in ListPerAutorizado:
+            if Persona.get_dni(i) == dni:
+                return i
+
+    def ObtenerNom(dni):
+        for i in ListPersona:
+            if Persona.get_dni(i) == dni:
+                return Persona.get_nombreApellido
+    
+    def ExistenciaPer(dni):
+        for j in ListPerAutorizado:
+            if Persona.get_dni(j) == dni:
+                return True

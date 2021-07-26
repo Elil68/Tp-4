@@ -48,4 +48,4 @@ class Empresa:
                       
 
     def __str__(self):
-        return f"{self.__razonSocial}, {self.__cuit}, {self.__domicilio}, {self.__localidad}, {self.__emailEmpresa}, {self.__telefono}, {self.__actividades}, {self.__empleados}" 
+        return f"{self.__razonSocial}, {self.__cuit}, {self.__domicilio}, {self.__localidad}, {self.__emailEmpresa}, {self.__telefono}" 
